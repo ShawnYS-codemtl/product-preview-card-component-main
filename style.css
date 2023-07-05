@@ -8,6 +8,11 @@ html {
 
 body {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 *, *:before, *:after {
@@ -15,7 +20,7 @@ body {
 }
 
 .card {
-    width: 375px;
+    width: 375px;   /* 375px */
     height: 700px;
     box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.35);
     border-radius: 10px;
@@ -80,6 +85,10 @@ body {
     text-decoration: line-through;
 }
 
+.attribution {
+    margin-top: 20px;
+}
+
 button {
     color: white;
     background-color: #3c8067;
@@ -88,5 +97,31 @@ button {
     font-weight: 700;
     border-radius: 10px;
     font-size: 1.2rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #3F965E;
+    transform: scale(1.02);
+}
+
+@media (min-width: 1024px){
+
+    .card {
+        width: 630px;
+        height: 550px;
+        flex-direction: row;
+    }
+
+    .image {
+        flex-basis: 50%;
+        height: 100%;
+        background-image: url(images/image-product-desktop.jpg);
+    }
+
+    .text {
+        flex-basis: 50%;
+        height: 100%;
+    }
 }
 
